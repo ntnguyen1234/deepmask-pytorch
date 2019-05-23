@@ -36,7 +36,7 @@ def rle_decode(mask_rle, shape):
     img_rs = img.reshape(shape, order='F')
     return (rle, img_rs)
 
-def create_coco_style(input_path, des):
+def create_coco_style(self, input_path, des):
     maxInt = sys.maxsize
 
     while True:

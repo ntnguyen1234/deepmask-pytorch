@@ -36,7 +36,7 @@ def rle_decode(mask_rle, shape):
     img_rs = img.reshape(shape, order='F')
     return (rle, img_rs)
 
-def create_coco_style(input_path):
+def create_coco_style(input_path, des):
     maxInt = sys.maxsize
 
     while True:
@@ -47,10 +47,10 @@ def create_coco_style(input_path):
             maxInt = int(maxInt/10)
             
     data_path = input_path + 'train.csv'
-    json_des = '/kaggle/working/label_descriptions.json'
+    # json_des = '/kaggle/working/label_descriptions.json'
 
-    with open(json_des, 'r') as f:
-        des = json.load(f)
+    # with open(json_des, 'r') as f:
+    #     des = json.load(f)
         
     info = des['info']
     categories = des['categories']

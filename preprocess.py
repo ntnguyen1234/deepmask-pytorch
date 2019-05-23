@@ -86,7 +86,7 @@ def create_coco_style(input_path):
 
     coco_output_test = coco_output
 
-    with open('{}/train.txt'.format(input_path), 'w') as output_text_file:
+    with open('{}train.txt'.format(input_path), 'w') as output_text_file:
         for row in X_dtrain:
             # Write training text
             output_text_file.write('{} '.format(row['ImageId']))
@@ -130,10 +130,10 @@ def create_coco_style(input_path):
             
             rows_train.append(ordered)
 
-    with open('{}/train.json'.format(input_path), 'w') as output_json_file:
+    with open('{}train.json'.format(input_path), 'w') as output_json_file:
         json.dump(coco_output, output_json_file)
 
-    with open('{}/test.txt'.format(input_path), 'w') as output_text_file:
+    with open('{}test.txt'.format(input_path), 'w') as output_text_file:
         for row in X_dtest:
             # Write test text
             output_text_file.write('{} '.format(row['ImageId']))
@@ -177,7 +177,7 @@ def create_coco_style(input_path):
             
             rows_train.append(ordered)
 
-        with open('{}/test.json'.format(input_path), 'w') as output_json_file:
+        with open('{}test.json'.format(input_path), 'w') as output_json_file:
             json.dump(coco_output_test, output_json_file)
 
 

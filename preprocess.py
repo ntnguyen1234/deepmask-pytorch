@@ -46,8 +46,8 @@ def create_coco_style(input_path):
         except:
             maxInt = int(maxInt/10)
             
-    data_path = 'train.csv'
-    json_des = 'label_descriptions.json'
+    data_path = input_path + 'train.csv'
+    json_des = input_path + 'label_descriptions.json'
 
     with open(json_des, 'r') as f:
         des = json.load(f)

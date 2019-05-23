@@ -47,7 +47,7 @@ def create_coco_style(input_path):
             maxInt = int(maxInt/10)
             
     data_path = input_path + 'train.csv'
-    json_des = input_path + 'label_descriptions.json'
+    json_des = input_path + 'imaterialist-fashion-2019-FGVC6/' + 'label_descriptions.json'
 
     with open(json_des, 'r') as f:
         des = json.load(f)
